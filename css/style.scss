@@ -181,12 +181,13 @@ header {
             padding-top: 24px;
 
             @include max-screen(440px){
-                position: fixed;
-                z-index: 25;
-                background: #fff;
-                width: 95%;
-                padding-bottom: 5px;
-                border-radius: 0 0 10px 10px ;
+                // position: fixed;
+                // z-index: 25;
+                // background: #fff;
+                // width: 95%;
+                // padding-bottom: 5px;
+                // border-radius: 0 0 10px 10px ;
+                display: none;
             }
         }
 

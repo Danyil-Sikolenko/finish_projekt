@@ -145,12 +145,7 @@ header .container .logo {
 }
 @media screen and (max-width: 440px) {
   header .container .logo {
-    position: fixed;
-    z-index: 25;
-    background: #fff;
-    width: 95%;
-    padding-bottom: 5px;
-    border-radius: 0 0 10px 10px;
+    display: none;
   }
 }
 header .container nav ul {
