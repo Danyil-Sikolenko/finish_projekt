@@ -184,7 +184,6 @@ header {
                 position: fixed;
                 z-index: 25;
                 background: #fff;
-                display: block;
                 width: 95%;
                 padding-bottom: 5px;
                 border-radius: 0 0 10px 10px ;
@@ -679,7 +678,9 @@ header {
     margin-bottom: 230px;
     @include max-screen(440px){
         flex-direction: column;
-        transform: translateX(30px);
+        // transform: translateX(30px);
+        position: relative;
+        left: 30px;
     }
 
     article {
@@ -1029,7 +1030,7 @@ header {
         }
     }
     @include max-screen(440px){
-       transform: translateX(-100px);
+       transform: translateX(-130px);
 
     }
 }
@@ -1041,7 +1042,7 @@ header {
         @include max-screen(440px){
             width: 100%;
             position: relative;
-            left: 30px;
+            left: 10px;
         }
 
     }
@@ -1066,6 +1067,9 @@ header {
         margin-top: 1000px;
         margin-bottom: 68px;
         font-family: "Roboto", sans-serif;
+        @include max-screen(440px){
+            margin-top: 800px;
+        }
     }
 
     .feedback_blocks_items {
@@ -1140,6 +1144,10 @@ header {
             padding-bottom: 22px;
 
         }
+        @include max-screen(440px){
+            position: relative;
+            transform: translateX(-120px);
+        }
     }
 }
 
@@ -1184,6 +1192,13 @@ header {
         color: #fff;
         font-family: "Roboto", sans-serif;
         margin-bottom: 21px;
+        @include max-screen(440px){
+            font-size: 30px;
+            position: relative;
+            left: -160px;
+            top: -55px;
+            width: 300px;
+        }
     }
 
     a {
@@ -1202,12 +1217,21 @@ header {
             transform: scale(1.05);
             transition: 0.5s;
         }
+        @include max-screen(440px){
+            position: relative;
+            left: -160px;
+            top: -55px;
+        }
     }
 
     img {
         position: absolute;
         bottom: 0%;
         left: 55%;
+        @include max-screen(440px){
+            width: 60%;
+            transform: translateX(-70px);
+        }
     }
 }
 
@@ -1220,6 +1244,10 @@ footer {
         justify-content: space-between;
         padding-top: 45px;
         border-bottom: solid 1px #969696 ;
+        @include max-screen(440px){
+            flex-direction: column;
+            text-align: center;
+        }
 
         .main_footer_post {
             .logo {
@@ -1246,6 +1274,9 @@ footer {
                     margin-right: 16px;
                 }
 
+            }
+            @include max-screen(440px){
+                margin-bottom: 50px;
             }
         }
         .footer_post_category{
@@ -1275,6 +1306,9 @@ footer {
                     }
                 }
             }
+            @include max-screen(440px){
+                display: none;
+            }
         }
         .footer_post_about{
             display: flex;
@@ -1301,6 +1335,9 @@ footer {
                     }
                 }
             }
+            @include max-screen(440px){
+                display: none;
+            }
         }
         .footer_post_newsletter{
             h5{
@@ -1319,6 +1356,9 @@ footer {
                 max-width: 277px;
                 font-family: "Roboto", sans-serif;
                 margin-bottom: 14px;
+                @include max-screen(440px){
+                   display: none;
+                }
             }
             input{
                 padding-top: 12px;
@@ -1349,6 +1389,9 @@ footer {
                     transform: scale(1.05);
                     transition: 0.3s;
                 }
+                @include max-screen(440px){
+                    margin-bottom: 10px;
+                }
             }
         }
     }
@@ -1367,6 +1410,10 @@ footer {
         padding-top: 24px;
         font-family: "Roboto", sans-serif;
         width: 252px;
+        @include max-screen(440px){
+            text-align: center;
+            width: 100%;
+        }
     }
     a{
         font-weight: 400;
@@ -1378,6 +1425,13 @@ footer {
         margin-right: 53px;
         position: relative;
         left: 640px;
+        @include max-screen(440px){
+          display: none;
+        }
+    }
+    @include max-screen(440px){
+        max-width: 440px;
+        padding: 0 10px;
     }
     
 }

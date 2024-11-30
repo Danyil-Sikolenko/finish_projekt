@@ -148,7 +148,6 @@ header .container .logo {
     position: fixed;
     z-index: 25;
     background: #fff;
-    display: block;
     width: 95%;
     padding-bottom: 5px;
     border-radius: 0 0 10px 10px;
@@ -622,7 +621,8 @@ header .container nav ul li .get_start:hover {
 @media screen and (max-width: 440px) {
   .our_servise_blocks {
     flex-direction: column;
-    transform: translateX(30px);
+    position: relative;
+    left: 30px;
   }
 }
 .our_servise_blocks article {
@@ -932,7 +932,7 @@ header .container nav ul li .get_start:hover {
 }
 @media screen and (max-width: 440px) {
   .new_application {
-    transform: translateX(-100px);
+    transform: translateX(-130px);
   }
 }
 
@@ -944,7 +944,7 @@ header .container nav ul li .get_start:hover {
   .new_application_poster img {
     width: 100%;
     position: relative;
-    left: 30px;
+    left: 10px;
   }
 }
 
@@ -965,6 +965,11 @@ header .container nav ul li .get_start:hover {
   margin-top: 1000px;
   margin-bottom: 68px;
   font-family: "Roboto", sans-serif;
+}
+@media screen and (max-width: 440px) {
+  .feedback_blocks h4 {
+    margin-top: 800px;
+  }
 }
 .feedback_blocks .feedback_blocks_items {
   position: relative;
@@ -1032,6 +1037,12 @@ header .container nav ul li .get_start:hover {
   padding-right: 17px;
   padding-bottom: 22px;
 }
+@media screen and (max-width: 440px) {
+  .feedback_blocks .feedback_blocks_items {
+    position: relative;
+    transform: translateX(-120px);
+  }
+}
 
 .owl-nav {
   display: flex;
@@ -1060,6 +1071,15 @@ header .container nav ul li .get_start:hover {
   font-family: "Roboto", sans-serif;
   margin-bottom: 21px;
 }
+@media screen and (max-width: 440px) {
+  .time_change_blocks h5 {
+    font-size: 30px;
+    position: relative;
+    left: -160px;
+    top: -55px;
+    width: 300px;
+  }
+}
 .time_change_blocks a {
   padding-top: 16px;
   padding-bottom: 15px;
@@ -1077,10 +1097,23 @@ header .container nav ul li .get_start:hover {
   transform: scale(1.05);
   transition: 0.5s;
 }
+@media screen and (max-width: 440px) {
+  .time_change_blocks a {
+    position: relative;
+    left: -160px;
+    top: -55px;
+  }
+}
 .time_change_blocks img {
   position: absolute;
   bottom: 0%;
   left: 55%;
+}
+@media screen and (max-width: 440px) {
+  .time_change_blocks img {
+    width: 60%;
+    transform: translateX(-70px);
+  }
 }
 
 footer {
@@ -1092,6 +1125,12 @@ footer .container {
   justify-content: space-between;
   padding-top: 45px;
   border-bottom: solid 1px #969696;
+}
+@media screen and (max-width: 440px) {
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 footer .container .main_footer_post .logo {
   font-weight: 500;
@@ -1112,6 +1151,11 @@ footer .container .main_footer_post p {
 }
 footer .container .main_footer_post a img {
   margin-right: 16px;
+}
+@media screen and (max-width: 440px) {
+  footer .container .main_footer_post {
+    margin-bottom: 50px;
+  }
 }
 footer .container .footer_post_category {
   display: flex;
@@ -1139,6 +1183,11 @@ footer .container .footer_post_category li a {
 footer .container .footer_post_category li a:hover {
   text-decoration: underline;
 }
+@media screen and (max-width: 440px) {
+  footer .container .footer_post_category {
+    display: none;
+  }
+}
 footer .container .footer_post_about {
   display: flex;
   flex-direction: column;
@@ -1163,6 +1212,11 @@ footer .container .footer_post_about li a {
 footer .container .footer_post_about li a:hover {
   text-decoration: underline;
 }
+@media screen and (max-width: 440px) {
+  footer .container .footer_post_about {
+    display: none;
+  }
+}
 footer .container .footer_post_newsletter h5 {
   font-weight: 700;
   font-size: 15px;
@@ -1179,6 +1233,11 @@ footer .container .footer_post_newsletter p {
   max-width: 277px;
   font-family: "Roboto", sans-serif;
   margin-bottom: 14px;
+}
+@media screen and (max-width: 440px) {
+  footer .container .footer_post_newsletter p {
+    display: none;
+  }
 }
 footer .container .footer_post_newsletter input {
   padding-top: 12px;
@@ -1210,6 +1269,11 @@ footer .container .footer_post_newsletter button:hover {
   transform: scale(1.05);
   transition: 0.3s;
 }
+@media screen and (max-width: 440px) {
+  footer .container .footer_post_newsletter button {
+    margin-bottom: 10px;
+  }
+}
 
 .footer_post_end {
   max-width: 1169px;
@@ -1226,6 +1290,12 @@ footer .container .footer_post_newsletter button:hover {
   font-family: "Roboto", sans-serif;
   width: 252px;
 }
+@media screen and (max-width: 440px) {
+  .footer_post_end p {
+    text-align: center;
+    width: 100%;
+  }
+}
 .footer_post_end a {
   font-weight: 400;
   font-size: 14px;
@@ -1236,4 +1306,15 @@ footer .container .footer_post_newsletter button:hover {
   margin-right: 53px;
   position: relative;
   left: 640px;
+}
+@media screen and (max-width: 440px) {
+  .footer_post_end a {
+    display: none;
+  }
+}
+@media screen and (max-width: 440px) {
+  .footer_post_end {
+    max-width: 440px;
+    padding: 0 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
