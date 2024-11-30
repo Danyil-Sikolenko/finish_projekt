@@ -611,8 +611,8 @@ header .container nav ul li .get_start:hover {
 @media screen and (max-width: 440px) {
   .our_servise_blocks {
     flex-direction: column;
-    position: relative;
-    left: 30px;
+    justify-content: center;
+    align-items: center;
   }
 }
 .our_servise_blocks article {
@@ -882,7 +882,7 @@ header .container nav ul li .get_start:hover {
   .new_application h4 {
     width: 300px;
     position: absolute;
-    transform: translateX(-75px);
+    transform: translateX(-55px);
     font-size: 35px;
     text-align: center;
     top: 220px;
@@ -903,7 +903,7 @@ header .container nav ul li .get_start:hover {
     top: 450px;
     width: 300px;
     text-align: center;
-    transform: translateX(-77px);
+    transform: translateX(-55px);
   }
 }
 .new_application a img {
@@ -914,11 +914,12 @@ header .container nav ul li .get_start:hover {
     position: relative;
     top: 470px;
     margin-bottom: 10px;
+    left: 20px;
   }
 }
 .new_application a .app_store {
   position: relative;
-  left: 10px;
+  left: 30px;
 }
 @media screen and (max-width: 440px) {
   .new_application {
@@ -1304,13 +1305,6 @@ footer .container .footer_post_newsletter button:hover {
 }
 @media screen and (max-width: 440px) {
   .footer_post_end {
-    max-width: 440px;
-    padding: 0 10px;
-  }
-}
-
-@media screen and (max-width: 440px) {
-  main {
     max-width: 440px;
     padding: 0 10px;
   }

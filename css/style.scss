@@ -181,12 +181,6 @@ header {
             padding-top: 24px;
 
             @include max-screen(440px){
-                // position: fixed;
-                // z-index: 25;
-                // background: #fff;
-                // width: 95%;
-                // padding-bottom: 5px;
-                // border-radius: 0 0 10px 10px ;
                 display: none;
             }
         }
@@ -679,9 +673,9 @@ header {
     margin-bottom: 230px;
     @include max-screen(440px){
         flex-direction: column;
-        // transform: translateX(30px);
-        position: relative;
-        left: 30px;
+        justify-content: center;
+        align-items: center;
+      
     }
 
     article {
@@ -989,7 +983,7 @@ header {
         @include max-screen(440px){
             width: 300px;
             position: absolute;
-            transform: translateX(-75px);
+            transform: translateX(-55px);
             font-size: 35px;
             text-align: center;
             top: 220px;
@@ -1010,7 +1004,7 @@ header {
             top: 450px;
             width:300px;
             text-align: center;
-            transform: translateX(-77px);
+            transform: translateX(-55px);
 
         }
     }
@@ -1023,11 +1017,12 @@ header {
                 position: relative;
                 top: 470px;
                 margin-bottom: 10px;
+                left: 20px;
             }
         }
         .app_store{
             position: relative;
-            left: 10px;
+            left: 30px;
         }
     }
     @include max-screen(440px){
@@ -1438,9 +1433,3 @@ footer {
 }
 
 
-main{
-    @include max-screen(440px){
-    max-width: 440px;
-    padding: 0 10px;
-    }
-}
