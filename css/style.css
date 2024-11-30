@@ -521,11 +521,6 @@ header .container nav ul li .get_start:hover {
 .quality_block ul {
   margin-bottom: 24px;
 }
-@media screen and (max-width: 440px) {
-  .quality_block ul {
-    transform: translateX(20px);
-  }
-}
 .quality_block ul li {
   margin-bottom: 14px;
   font-weight: 400;
@@ -1309,6 +1304,13 @@ footer .container .footer_post_newsletter button:hover {
 }
 @media screen and (max-width: 440px) {
   .footer_post_end {
+    max-width: 440px;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  main {
     max-width: 440px;
     padding: 0 10px;
   }

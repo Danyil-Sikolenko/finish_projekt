@@ -583,7 +583,7 @@ header {
     ul {
         margin-bottom: 24px;
         @include max-screen(440px){
-            transform: translateX(20px);
+            // transform: translateX(20px);
         }
 
         li {
@@ -1435,4 +1435,12 @@ footer {
         padding: 0 10px;
     }
     
+}
+
+
+main{
+    @include max-screen(440px){
+    max-width: 440px;
+    padding: 0 10px;
+    }
 }
