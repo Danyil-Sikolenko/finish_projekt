@@ -79,7 +79,7 @@ a {
   width: 100%;
   height: 100%;
   padding: 15px;
-  background: #51cb69;
+  background: #40a3f8;
   transform: translateX(-100%);
   transition: transform 0.5s;
 }
@@ -105,8 +105,10 @@ a {
 }
 .menu_list ul li a {
   font-size: 50px;
+  font-weight: 500;
   color: #000000;
-  border-bottom: solid 1px #000000;
+  border-bottom: solid 5px #fff;
+  font-family: "Rubik", sans-serif;
 }
 
 body {
