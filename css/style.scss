@@ -22,18 +22,16 @@ a {
     text-decoration: none;
 }
 
-
-
-
 @mixin max-screen($res) {
     @media screen and (max-width: $res) {
         @content;
     }
 }
 
-
-
-
+@mixin landscape-screen($size) {
+     @media (max-width: $size) and (orientation: landscape) { 
+        @content; }
+     }
 
 
 
@@ -52,6 +50,10 @@ a {
     display: none;
 
     @include max-screen(440px) {
+        display: block;
+        left: 80%;
+    }
+    @include max-screen(932px) {
         display: block;
         left: 80%;
     }
@@ -152,12 +154,17 @@ body {
 
 
 
-.container {
+.containers {
     max-width: 1169px;
     position: relative;
+    margin: auto;
     @include max-screen(440px){
         padding: 0 10px;
-        max-width: 440px;
+        max-width: 426px;
+    }
+    @include landscape-screen(932px){
+        padding: 0 10px;
+        max-width: 932px;
     }
 }
 
@@ -169,7 +176,7 @@ body {
 header {
     margin-bottom: 254px;
 
-    .container {
+    .containers{
         max-width: 1169px;
         display: flex;
         margin: auto;
@@ -183,6 +190,10 @@ header {
             letter-spacing: 0.03em;
             color: #40a3f8;
             padding-top: 24px;
+
+            @include landscape-screen(932px){
+                display: none;
+            }
 
             @include max-screen(440px){
                 display: none;
@@ -233,10 +244,16 @@ header {
                 display: none;
             }
         }
+        @include landscape-screen(932px){
+            display: none;
+        }
         @include max-screen(440px){
             padding: 0 10px;
             max-width: 440px;
         }
+    }
+    @include landscape-screen(932px){
+        margin-bottom: 50px;
     }
 }
 
@@ -254,6 +271,10 @@ header {
         span{
             color: #40a3f8;
         }
+        @include landscape-screen(932px){
+           text-align: center;
+           width: 100%;
+        }
         @include max-screen(440px){
             text-align: center;
         }
@@ -266,6 +287,10 @@ header {
         font-family: "Roboto", sans-serif ;
         display: block;
         margin-bottom: 50px;
+        @include landscape-screen(932px){
+            text-align: center;
+            width: 100%;
+        }
         @include max-screen(440px){
             text-align: center;
         }
@@ -286,6 +311,9 @@ header {
         z-index: 1;
         right: -100px;
         top: -140px;
+    }
+    @include landscape-screen(932px){
+        display: none;
     }
     @include max-screen(440px){
         display: none;
@@ -382,10 +410,13 @@ header {
                 border-left: .3em solid transparent;
         }
     }
+    @include landscape-screen(932px){
+        transform: translateX(15%);
+    }
     @include max-screen(440px){
         display: flex;
         flex-direction: column;
-    }
+    }   
 }
 
 .cards_position_main_banner_1{
@@ -393,6 +424,9 @@ header {
     z-index: 10;
     right: -145px;
     bottom: 40px;
+    @include landscape-screen(932px){
+        display: none;
+    }
     @include max-screen(440px){
         display: none;
     }
@@ -401,6 +435,9 @@ header {
     position: absolute;
     z-index: 10;
     bottom: -90px;
+    @include landscape-screen(932px){
+        display: none;
+    }
     @include max-screen(440px){
         display: none;
     }
@@ -411,6 +448,9 @@ header {
     z-index: 10;
     bottom: 120px;
     transform: translateX(-20px);
+    @include landscape-screen(932px){
+        display: none;
+    }
     @include max-screen(440px){
         display: none;
     }
@@ -421,6 +461,9 @@ header {
     z-index: 10;
     bottom: 340px;
     transform: translateX(20px);
+    @include landscape-screen(932px){
+        display: none;
+    }
     @include max-screen(440px){
         display: none;
     }
@@ -430,6 +473,9 @@ header {
     z-index: 10;
     bottom: 360px;
     transform: translateX(440px);
+    @include landscape-screen(932px){
+        display: none;
+    }
     @include max-screen(440px){
         display: none;
     }
@@ -486,6 +532,9 @@ header {
     color: #3e3e3e;
     font-family: "Roboto", sans-serif;
     margin-top: 225px;
+    @include landscape-screen(932px){
+        margin-top: 125px; 
+    }
 
 }
 
@@ -511,6 +560,9 @@ header {
     .foto_block_main {
         position: relative;
         left: 100px;
+        @include landscape-screen(932px){
+            transform: translateX(-16px);
+        }
         @include max-screen(440px){
             transform: translate(45px);
         }
@@ -521,6 +573,9 @@ header {
         z-index: 5;
         right: -10px;
         top: -10px;
+        @include landscape-screen(932px){
+            transform: translateX(-16px);
+        }
         @include max-screen(440px){
             transform: translate(45px);
         }
@@ -533,6 +588,9 @@ header {
     display: flex;
     align-items: center;
     margin-bottom: 201px;
+    @include landscape-screen(932px){
+        flex-direction: column;
+    }
     @include max-screen(440px){
         flex-direction: column;
     }
@@ -543,6 +601,11 @@ header {
     // margin-right:103px;
     position: relative;
     right: 103px;
+    @include landscape-screen(932px){
+        transform: translateX(10%);
+        width: 90%;
+        margin-bottom: 15px;
+    }
     @include max-screen(440px){
         width: 90%;
         transform: translate(95px);
@@ -559,6 +622,9 @@ header {
         color: #3d3d3f;
         font-family: "Roboto", sans-serif;
         margin-bottom: 24px;
+        @include landscape-screen(932px){
+            text-align: center;
+        }
         @include max-screen(440px){
             text-align: center;
         }
@@ -572,6 +638,10 @@ header {
         color: rgba(61, 61, 63, 0.7);
         font-family: "Roboto", sans-serif;
         margin-bottom: 3px;
+        @include landscape-screen(932px){
+            text-align: center;
+            margin-bottom: 30px;
+        }
         @include max-screen(440px){
             margin-bottom: 20px;
             text-align: center;
@@ -675,6 +745,9 @@ header {
     display: flex;
     gap: 65px;
     margin-bottom: 230px;
+    @include landscape-screen(932px){
+       gap: 30px;
+    }
     @include max-screen(440px){
         flex-direction: column;
         justify-content: center;
@@ -708,6 +781,11 @@ header {
             padding-left: 63px;
             padding-right: 62px;
             padding-bottom: 31px;
+            @include landscape-screen(932px){
+               padding-left: 33px;
+               padding-right: 32px;
+               padding-bottom: 16px;
+            }
         }
 
         .our_servise_blocks_heart_logo {
@@ -768,6 +846,9 @@ header {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 58px;
+    @include landscape-screen(932px){
+       flex-wrap: wrap;
+    }
     @include max-screen(440px){
         flex-direction: column;
     }
@@ -781,6 +862,12 @@ header {
         border-radius: 10px;
         box-shadow: 0 4px 120px 0 rgba(0, 0, 0, 0.05);
         background: linear-gradient(138deg, rgba(254, 254, 254, 0) 0%, #f9f9f9 0.01%, rgba(254, 254, 254, 0.51) 100%);
+        @include landscape-screen(932px){
+            margin-bottom: 30px;
+            &:last-of-type{
+                transform: translateX(102%);
+               }
+        }
         @include max-screen(440px){
             margin-bottom: 20px;
         }
@@ -1039,6 +1126,9 @@ header {
     img {
         position: absolute;
         left: -100px;
+        @include landscape-screen(932px){
+           width: 80%;
+        }
         @include max-screen(440px){
             width: 100%;
             position: relative;
@@ -1228,6 +1318,9 @@ header {
         position: absolute;
         bottom: 0%;
         left: 55%;
+        @include landscape-screen(932px){
+            width: 40%;
+        }
         @include max-screen(440px){
             width: 60%;
             transform: translateX(-70px);
@@ -1239,7 +1332,7 @@ header {
 footer {
     background: #fff;
     padding-bottom: 20px;
-    .container {
+    .containers {
         display: flex;
         justify-content: space-between;
         padding-top: 45px;
@@ -1410,6 +1503,10 @@ footer {
         padding-top: 24px;
         font-family: "Roboto", sans-serif;
         width: 252px;
+        @include landscape-screen(932px){
+            text-align: center;
+            width: 100%;
+        }
         @include max-screen(440px){
             text-align: center;
             width: 100%;
@@ -1425,6 +1522,9 @@ footer {
         margin-right: 53px;
         position: relative;
         left: 640px;
+        @include landscape-screen(932px){
+            display: none;
+        }
         @include max-screen(440px){
           display: none;
         }
